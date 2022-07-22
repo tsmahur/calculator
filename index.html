@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- keypress event atached  -->
+        <!-- <div class="display" id="displayId" contenteditable="true" onkeypress="keyPressFromDisplay(event)"></div> -->
+        <input type="text" name="display"   class="display" id="displayId"  onkeypress="keyPressFromDisplay(event)">
+        <div id="error"></div>
+
+        <!-- TODO :These will be used to add button for history, back , scientific mode, convertor -->
+        <!-- <div class="tabs">
+            TODO
+        </div> -->
+
+        <!--TODO : map these with keys of keyboard -->
+        <div class="keypad">
+            <!-- <div class="row"> -->
+                <div class="key key-highlight-cancel"><input type="button" value="C" onclick="clearAll()"></div>
+                <div class="key key-highlight-operations"><input type="button" value="()" onclick="appendToDisplay('()')" disabled></div>
+                <div class="key key-highlight-operations"><input type="button" value="%" onclick="appendToDisplay('%')"></div>
+                <div class="key key-highlight-operations"><input type="button" value="/" onclick="appendToDisplay('/')"></div>
+            <!-- </div>
+            <div class="row"> -->
+                <div class="key"><input type="button" value="7" onclick="appendToDisplay('7')"></div>
+                <div class="key"><input type="button" value="8" onclick="appendToDisplay('8')"></div>
+                <div class="key"><input type="button" value="9" onclick="appendToDisplay('9')"></div>
+                <div class="key key-highlight-operations"><input type="button" value="X" onclick="appendToDisplay('*')"></div>
+            <!-- </div>
+            <div class="row"> -->
+                <div class="key"><input type="button" value="4" onclick="appendToDisplay('4')"></div>
+                <div class="key"><input type="button" value="5" onclick="appendToDisplay('5')"></div>
+                <div class="key"><input type="button" value="6" onclick="appendToDisplay('6')"></div>
+                <div class="key key-highlight-operations"><input type="button" value="-" onclick="appendToDisplay('-')"></div>
+            <!-- </div>
+            <div class="row"> -->
+                <div class="key"><input type="button" value="1" onclick="appendToDisplay('1')"></div>
+                <div class="key"><input type="button" value="2" onclick="appendToDisplay('2')"></div>
+                <div class="key"><input type="button" value="3" onclick="appendToDisplay('3')"></div>
+                <div class="key key-highlight-operations"><input type="button" value="+" onclick="appendToDisplay('+')"></div>
+            <!-- </div>
+            <div class="row"> -->
+                <!-- +/- not mplemented as of now, refer mobile calculator for implementation -->
+                <div class="key"><input type="button" value="+/-" onclick="appendToDisplay('+')" disabled></div>
+                <div class="key"><input type="button" value="0" onclick="appendToDisplay('0')"></div>
+                <div class="key"><input type="button" value="." onclick="appendToDisplay('.')"></div>
+                <div class="key key-highlight-operations key-highlight-operations-equal"><input type="button" value="=" onclick="evaluateFromDisplay()"></div>
+            <!-- </div> -->
+            
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

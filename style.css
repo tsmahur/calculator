@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  :root {
+    --width-pc:350px;
+    --height-pc:600px;
+  }
+
+  body{
+    background-color: rgb(238, 243, 243);
+  }
+.container{
+    background-color: azure;
+    /* for mobile set these to 100vw,100vh */
+    width: var(--width-pc);
+    height: var(--height-pc);
+    border: 1px solid grey;
+    border-radius: 5%;
+    margin: 70px auto; 
+    /* padding: 0px 0px; */
+    overflow: hidden; /*controlling main screen over flow*/
+}
+/* ---------------------------- */
+.display{
+    background-color: rgb(232, 238, 238);
+    width: 93%;
+    /* width: initial; */
+    height: 60px;
+    border: 1px solid grey;
+    border-radius: 8% 8% 8% 8% / 35% 35% 35% 35%  ;
+    margin: 20px 13px;
+    padding: 8px;
+    font-size: 2.5rem;
+    overflow: hidden; /*controlling display over flow*/
+    /* pointer-events: none; */
+}
+/* ---------------------------- */
+#error{
+    /* width: 350px; */
+    height: 20px;
+    text-align: center;
+    color: brown;
+    margin: 30px;
+}
+/* ---------------------------- */
+.tabs{
+    background-color: rgb(232, 238, 238);
+    width: 350px;
+    height: 60px;
+    border: 1px solid grey;
+    border-radius: 10% 10%;
+    margin: 3px;
+    padding: 3px;
+}
+/* ---------------------------- */
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 0.1rem;
+    row-gap: 1.5rem;
+    justify-items: center;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+/* .row{ */
+    /* display: flex; */
+    /* display: grid; */
+    /* align-items: center; */
+    /* align-items: flex-end; */
+    /* justify-content: center; */
+    /* align-content: center; */
+    /* align-items: stretch; */
+/* } */
+.key{
+    /* flex: 1 1 25%; */
+
+    /* background-color: rgb(170, 212, 212); */
+    /* margin: 2px; */
+    /* padding: 1.5rem 0; */
+    /* border: 1px solid grey;
+    border-radius: 50%; */
+    height: 4rem;
+    width: 4rem;
+    /* text-align: center; */
+    /* align-items: center; */
+}
+.key input{
+    background-color: rgb(217, 235, 235);
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+.key input:hover{
+    background-color: rgb(147, 219, 219);
+}
+/* putting disabled after hover so that hover do not work for disabled inputs */
+.key input:disabled{
+    background-color: rgb(183, 199, 199);
+}
+.key-highlight-cancel input{
+    color: rgb(242, 73, 61);
+}
+.key-highlight-operations input{
+    color: rgb(18, 116, 37);
+}
+.key-highlight-operations-equal input{
+    color: rgb(18, 116, 37);
+    background-color: rgb(145, 235, 163);
+}
+@media (max-width: 768px) {
+    body{
+        /* background-color: rgb(238, 243, 243); */
+        background-color: azure;
+      }
+    .container{
+        width: 100vw;
+        height: 92vh;
+        border: none;
+        border-radius: 0%;
+        margin: 0px 0px;
+        /* margin: auto; */
+    }
+    .display{
+        margin-top: 50px;
+        margin-bottom: 5px;
+        pointer-events: none;
+    }
+    .keypad{
+        margin: 0px 14px;
+    }
+    .key{
+        height: 5rem;
+        width: 5rem;
+    }
+    /* .key input{
+        pointer-events: none;
+    } */
+}
